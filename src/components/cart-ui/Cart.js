@@ -1,3 +1,5 @@
+
+import Modal from '../_core-ui/Modal';
 import classes from './Cart.module.css';
 
 const Cart = props => {
@@ -9,20 +11,24 @@ const Cart = props => {
       amount: 2,
       price: 12.99
     }
-  ].map(cartItem => <li>{cartItem.name}</li>)}</ul>;
+  ].map(cartItem => <li key={Math.random().toString}>{cartItem.name}</li>)}</ul>;
+
+
+
+
 
   return (
-    <div>
+    <Modal onConfirm={props.onCloseCart}>
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
         <span>35.62</span>
       </div>
       <div className={classes.actions}>
-        <button className={classes['button--alt']}>Close</button>
+        <button onClick={props.onCloseCart} className={classes['button--alt']}>Close</button>
         <button className={classes.button}>Order</button>
       </div>
-    </div>
+    </Modal>
   )
 };
 
