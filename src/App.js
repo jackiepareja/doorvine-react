@@ -22,9 +22,9 @@ function App() {
     <Fragment>
       {
         cartIsShown &&
-        (<Cart onCloseCart={hideCartHandler} />)
+        (<Cart onHideCart={hideCartHandler} />)
       }
-      <Header onOpenCart={showCartHandler} />
+      <Header onShowCart={showCartHandler} />
       <main>
         <Meals />
       </main>

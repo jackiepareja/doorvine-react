@@ -6,7 +6,7 @@ const Backdrop = props => {
   return (
     <div
       className={classes.backdrop}
-      onClick={props.onConfirm}
+      onClick={props.onClick}
     ></div>
   )
 }
@@ -28,7 +28,7 @@ const Modal = (props) => {
     <Fragment>
       {
         ReactDOM.createPortal(
-          <Backdrop onConfirm={props.onConfirm} />, portalElement
+          <Backdrop onClick={props.onClick} />, portalElement
         )
       }
       {
