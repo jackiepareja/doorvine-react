@@ -18,3 +18,26 @@
   background-color: #641e03;
   border-color: #641e03;
 }
+
+.error {
+  position: relative;
+  background-color: red;
+  color: #fff;
+	border-radius: 15px;
+  text-align: center;
+}
+
+.error:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: red;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: 35px;
+	margin-bottom: -15px;
+}
