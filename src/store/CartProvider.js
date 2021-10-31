@@ -8,12 +8,7 @@ const defaultCartState = {
   totalAmount: 0
 }
 
-// alt useState : (state, action) => return newState w/ a dispatch method
-// useReducer is preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. 
-// useReducer also lets you optimize performance for components that trigger deep updates b/c you can pass dispatch down instead of callbacks.
-// this is the reducer function that has complex state logic
 const cartReducer = (state, action) => {
-  // logic to add ADD_CART_ITEM from dispatch method below
   if (action.type === 'ADD_CART_ITEM') {
     const updatedTotalAmount = state.totalAmount + action.item.price * action.item.amount;
 
@@ -40,8 +35,6 @@ const cartReducer = (state, action) => {
   }
 
   if (action.type === 'REMOVE_CART_ITEM') {
-
-
     const existingCartItemIndex = state.items.findIndex((item) => item.id === action.id);
     const existingItem = state.items[existingCartItemIndex];
     const updatedTotalAmount = state.totalAmount - existingItem.price;

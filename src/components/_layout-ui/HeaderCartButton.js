@@ -7,7 +7,7 @@ const HeaderCartButton = (props) => {
   const [btnIsHighlighted, setBtnIsHighlighted] = useState(false);
   const cartCtx = useContext(CartContext);
 
-  // use .reduce() instead of .length() to find the number of cart items in an array. .length() counts every item in the array where we only want items of different types.
+  // find the number of cart items in an array
   const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0)

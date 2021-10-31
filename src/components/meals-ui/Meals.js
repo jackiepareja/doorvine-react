@@ -4,9 +4,6 @@ import AvailableMeals from "./AvailableMeals";
 
 
 const Meals = () => {
-
-
-
   return (
     <Fragment>
       <MealsSummary />
