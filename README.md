@@ -13,7 +13,7 @@
 ## Features
 - [x] Add/Remove Cart Items
 - [x] Computes total of item price * item quantity
-- [x] Manages state using React Hooks  
+- [x] Manages state, side effects using React Hooks  
 
 
 https://doorvine-react.netlify.app/
